@@ -1,0 +1,120 @@
+Q1. explaing the architecture of nodejs.
+Solution => There are mainly three  section in node js architecture these are Call stack,Node APIs
+	      and Call back queue:-
+      Initially,Synchronus code will get inside the call stack and Asynchronus 
+	code like if it is taking some time to fetch some details from the server 
+	those kind of code will get inside the node APIs.Firstly,call stack get empty 
+	and run all the piece of code inside it and after that comes to the node APIs part 
+	which contains the Asynchronus piece of code.then sent to call back queue according 
+    	to the minimum time. after which they will be present for the execution.they are
+      sorted in that order .they will get inside the call back queue one by one and from call
+      back queue they will go to call stack and get executed there .this loop getting inside
+      node APIs then to call back queue and then to call stack is called event loop.
+
+
+
+
+Q2. explain the feature of nodejs like non-blocking, synchronous, single threaded.
+Solution => features of node js:-
+1. Synchronus:- Synchronous execution usually refers to code executing in sequence. 
+	In sync programming, the program is executed line by line, one line at a time. 
+	Each time a function is called, the program execution waits until that 
+	function returns before continuing to the next line of code.
+
+2. Single-threaded:- Node.js employs a single-threaded architecture with event looping,
+      making it very scalable.In contrast to typical servers, which create limited threads 
+      to process requests, the event mechanism allows the node.js server to reply in
+      a non-blocking manner and makes it more scalable.
+
+3. Non-blocking:- Non-Blocking nature of node.js simply means that node.js proceeds with 
+      the execution of  the program instead of waiting for long I/O operations or HTTP requests.
+ 
+
+
+
+Q3. create a array and object in javascript and print it.
+Solution => let arr = [1,2,3,4,5];
+		const flowers = {
+			name: 'Rose',
+			color: 'Red' ,
+			smell: 'yes' ,
+			};
+
+            console.log(arr);
+		console.log(flowers);
+		
+ output:- [ 1, 2, 3, 4, 5 ]
+          { name: 'Rose', color: 'Red', smell: 'yes' }
+
+	     
+
+
+
+Q4. Nowadays how data is transferred between server and client?(explain about json)
+Solution =>Data is transferred between server and client using JSON .
+
+      JSON is stands for Javascript Object Notation.JSON is language independent .
+	JSON is a widely used format for sending and receiving data to or from 
+	the server.it is a text format for storing and transporting data.
+      it is "self-describing" and easy to understand.The JSON format is syntactically
+	similar to the code for creating JavaScript objects. Because of this, a JavaScript
+      program can easily convert JSON data into JavaScript objects.
+
+
+
+
+Q5. write program to show how to append, pop and sort elements in array in javascript.
+Solution =>POP:- const names = ["Ankita", "Beauty", "Nikita", "Gunja"];
+		     names.pop();
+		     console.log(names);		
+          output:- [ 'Ankita', 'Beauty', 'Nikita' ]
+
+
+	    SORT:- const names = ["Ankita", "Beauty", "Nikita", "Gunja"];
+		     names.sort();
+		     console.log(names);
+	   output:- [ 'Ankita', 'Beauty', 'Gunja', 'Nikita' ]
+
+
+         APPEND:- const names = ["Ankita", "Beauty", "Nikita", "Gunja"];
+		      names.push("Ankesh");
+		      console.log(names);
+	   output:- ['Ankita', 'Beauty', 'Nikita', 'Gunja', 'Ankesh']
+
+
+
+
+Q6. why should we use let in place of var in our javascript programs?
+Solution => we use let in place of var in our javascript programs because let allows us to declare 
+	variables that are limited to the scope of a block statement, or expression on which it is used,
+ 	unlike the var keyword, which declares a variable globally, or locally to an entire function 
+	regardless of block scope. 
+
+
+
+
+Q7. explain about all the primitive data types in javascript.
+Solution => There are seven types primitive data types in javascript :-
+    * Number:- In JavaScript, there is only one type of number and this can be any numerical 
+		   value with or without decimals.
+			Example:- var a = 25; 
+
+    * String:- The string data type refers to any set of characters wrapped inside single or double-quotes.
+ 			Example:- var b = "Hi there!"; 
+
+    * Undefined:- If a variable has been declared, but has not been assigned a value, has the value undefined.
+			Example:- var a;
+
+    * Null:- The null data type that is represented by only one value, the ‘null’ itself. A null value means no value. 
+			Example:- var a = null;
+
+    * Boolean:- The Boolean data type can hold only two values true or false. 
+			Example:- var Reading = true; 
+
+    * BigInt:- The BigInt type is a numeric primitive in JavaScript that can represent 
+			integers with arbitrary magnitude.
+			Example:- const x = BigInt(Number.MAX_SAFE_INTEGER);
+
+    * Symbol:- A Symbol is a unique and immutable primitive value and may be used as the key of an 
+			Object property.
+			Example:- var occupation=Symbol();
